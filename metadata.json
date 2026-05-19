@@ -1,0 +1,6 @@
+{
+  "name": "Smażalnia Przystań Rowy",
+  "description": "Najlepsza ryba w Rowach. Świeży połów, rodzinna atmosfera i morski klimat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

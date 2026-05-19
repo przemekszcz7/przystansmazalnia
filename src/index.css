@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-ui: "Nunito", sans-serif;
+  --font-body: "Lato", sans-serif;
+
+  --color-bg-primary: #F0F8FF;
+  --color-bg-secondary: #E8F4FD;
+  --color-bg-card: #FFFFFF;
+  --color-bg-warm: #FFF8F0;
+  --color-bg-dark: #1B3A4B;
+  --color-bg-dark-secondary: #243B4E;
+  --color-bg-dock: #2C1810;
+
+  --color-sea-primary: #2196F3;
+  --color-sea-light: #64B5F6;
+  --color-sea-pale: #BBDEFB;
+  --color-sea-deep: #1565C0;
+  --color-sea-turquoise: #00BCD4;
+
+  --color-sun-yellow: #FFD54F;
+  --color-sun-orange: #FF8F00;
+  --color-sand: #F5DEB3;
+  --color-sand-dark: #DEB887;
+
+  --color-rope-brown: #8B6914;
+  --color-wood-light: #D4A853;
+  --color-wood-dark: #8B5E3C;
+  --color-rust: #B5461B;
+
+  --color-text-primary: #1B3A4B;
+  --color-text-secondary: #2C5F7A;
+  --color-text-muted: #7B9AAB;
+  --color-text-light: #F0F8FF;
+  --color-text-light-muted: #90CAE8;
+  --color-text-accent: #2196F3;
+  --color-text-warm: #8B5E3C;
+
+  --color-border-light: #D6EAF8;
+  --color-border-sea: #2196F3;
+  --color-border-rope: #8B6914;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  .markdown-body h1 { @apply text-4xl font-bold mb-4; }
+  .markdown-body h2 { @apply text-3xl font-bold mb-3 mt-6; }
+  .markdown-body p { @apply mb-4 leading-relaxed; }
+}
+
+@layer components {
+  .nautical-card {
+    @apply bg-bg-card rounded-xl p-6 shadow-sm border border-border-light relative overflow-hidden;
+  }
+}
+
+/* Custom fishing net texture */
+.fishing-net-texture {
+  background-image: radial-gradient(circle at 2px 2px, rgba(123, 154, 171, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Dock planks texture */
+.dock-planks {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 40px,
+    rgba(0, 0, 0, 0.1) 40px,
+    rgba(0, 0, 0, 0.1) 41px
+  );
+}
